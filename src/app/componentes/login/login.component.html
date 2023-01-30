@@ -1,0 +1,40 @@
+
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <div>
+      <label for="email">Email: </label>
+      <input class="form-control"
+        type="email"
+        formControlName="email"
+        [class.border-danger]="MailInvalid"
+      />
+    </div>
+    <!-- Gracias al getter que configuramos en el controlador -->
+    <div *ngIf="Mail?.errors && Mail?.touched"  >
+      <p *ngIf="Mail?.hasError('required')" >El email es requerido.</p>
+      <p *ngIf="Mail?.hasError('email')" >
+        El formato del email debe ser válido.
+      </p>
+    </div>
+  
+    <br />
+    <div>
+      <label for="exampleInputPassword1">Password: </label>
+      <input class="form-control"
+        type="password"
+        formControlName="password"
+        [class.border-danger]="PasswordInvalid"
+      />
+    </div>
+    <!-- Gracias al getter que configuramos en el controlador -->
+    <div *ngIf="Password?.errors && Password?.touched" >
+      <p *ngIf="Password?.hasError('required')" >
+        El password es requerido.
+      </p>
+      
+    </div>
+    <br />
+    <div>
+      <button type="submit">Iniciar Sesión</button>
+    </div>
+  </form>
+  

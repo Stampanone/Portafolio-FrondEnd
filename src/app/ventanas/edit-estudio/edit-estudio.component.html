@@ -1,0 +1,72 @@
+<section id="idiomas">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <input type="hidden" formControlName="id"  [ngModel]="estu.id" >
+    <div>
+      <label for="titulo">titulo: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="titulo"
+        [ngModel]="estu.titulo"
+        [ngClass]="{'is-invalid': Titulo.errors && Titulo.touched, 'is-valid': !Titulo.errors && Titulo.touched}" 
+      />
+      
+      <div *ngIf="Titulo.errors && Titulo.touched" class="invalid-feedback">
+        <div *ngIf="Titulo.errors['required']">El Titulo es requerido</div>
+      </div> 
+    </div>
+
+    <div>
+      <label for="institucion" class="form-label">institucion: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="institucion"
+        [ngModel]="estu.institucion"
+        [ngClass]="{'is-invalid': Institucion.errors && Institucion.touched, 'is-valid': !Institucion.errors && Institucion.touched}" 
+       />
+       <div *ngIf="Institucion.errors && Institucion.touched" class="invalid-feedback">
+        <div *ngIf="Institucion.errors['required']">La institucion es requerida</div>
+      </div> 
+    </div>
+    <div>
+        <label for="inicio" class="form-label">inicio: </label>
+        <input class="form-control"
+          type="date"
+          formControlName="inicio"
+          [ngModel]="estu.inicio"
+          [ngClass]="{'is-invalid': Inicio.errors && Inicio.touched, 'is-valid': !Inicio.errors && Inicio.touched}" 
+         />
+         <div *ngIf="Inicio.errors && Inicio.touched" class="invalid-feedback">
+          <div *ngIf="Inicio.errors['required']">El Inicio es requerido</div>
+        </div> 
+      </div>
+      <div>
+        <label for="fin" class="form-label">fin: </label>
+        <input class="form-control"
+          type="date"
+          formControlName="fin"
+          [ngModel]="estu.fin"
+          [ngClass]="{'is-invalid': Fin.errors && Fin.touched, 'is-valid': !Fin.errors && Fin.touched}" 
+         />
+         <div *ngIf="Fin.errors && Fin.touched" class="invalid-feedback">
+          <div *ngIf="Fin.errors['required']">El Fin es requerido</div>
+        </div> 
+      </div>
+      <div>
+        <label for="descripcion" class="form-label">descripcion: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="descripcion"
+          [ngModel]="estu.descripcion"
+          [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}" 
+         />
+         <div *ngIf="Descripcion.errors && Descripcion.touched" class="invalid-feedback">
+          <div *ngIf="Descripcion.errors['required']">La Descripcion es requerida</div>
+        </div> 
+      </div>
+    <br />
+    <div>
+      <button type="submit">Guardar cambios</button>
+    </div>
+  </form>
+</section>
+

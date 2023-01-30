@@ -1,0 +1,33 @@
+<section id="idiomas">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <div>
+      <label for="nombre">nombre: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="nombre"
+        [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}" 
+      />
+      
+      <div *ngIf="Nombre.errors && Nombre.touched" class="invalid-feedback">
+        <div *ngIf="Nombre.errors['required']">El Nombre es requerido</div>
+      </div> 
+    </div>
+
+    <div>
+      <label for="porcentajeDominado" class="form-label">Porcentaje Dominado: </label>
+      <input class="form-control"
+        type="number"
+        formControlName="porcentajeDominado"
+        [ngClass]="{'is-invalid': PorcentajeDominado.errors && PorcentajeDominado.touched, 'is-valid': !PorcentajeDominado.errors && PorcentajeDominado.touched}" 
+       />
+       <div *ngIf="PorcentajeDominado.errors && PorcentajeDominado.touched" class="invalid-feedback">
+        <div *ngIf="PorcentajeDominado.errors['required']">El Porcentaje Dominado es requerido</div>
+      </div>
+    </div>
+   
+    <br />
+    <div>
+      <button type="submit">Agregar</button>
+    </div>
+  </form>
+</section>

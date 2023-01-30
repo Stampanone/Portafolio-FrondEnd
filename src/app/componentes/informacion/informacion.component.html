@@ -1,0 +1,9 @@
+<section id="acerca-de" class="tarjetas" *ngFor="let pers of Persona">
+    <h3>Informacíon</h3>
+ 
+    <button class="btn"><i class="fa-solid fa-pen" routerLink="editpersona/{{Persona.id}}"></i></button>
+    
+      <p>{{pers.sobreMi}}</p>
+
+    
+  </section>

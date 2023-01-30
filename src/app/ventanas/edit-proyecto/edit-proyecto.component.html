@@ -1,0 +1,49 @@
+<section id="idiomas">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <input type="hidden" formControlName="id"  [ngModel]="proyec.id" >
+    <div>
+      <label for="nombre">Nombre: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="nombre"
+        [ngModel]="proyec.nombre"
+        [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}" 
+      />
+      
+      <div *ngIf="Nombre.errors && Nombre.touched" class="invalid-feedback">
+        <div *ngIf="Nombre.errors['required']">El Nombre es requerido</div>
+      </div> 
+    </div>
+
+    <div>
+      <label for="descripcion" class="form-label">Descripcion: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="descripcion"
+        [ngModel]="proyec.descripcion"
+        [ngClass]="{'is-invalid': Descripcion.errors && Descripcion.touched, 'is-valid': !Descripcion.errors && Descripcion.touched}" 
+       />
+       <div *ngIf="Descripcion.errors && Descripcion.touched" class="invalid-feedback">
+        <div *ngIf="Descripcion.errors['required']">La Descripcion es requerida</div>
+      </div> 
+    </div>
+    <div>
+        <label for="urlFoto" class="form-label">URL de la Foto: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="urlFoto"
+          [ngModel]="proyec.urlFoto"
+          [ngClass]="{'is-invalid': UrlFoto.errors && UrlFoto.touched, 'is-valid': !UrlFoto.errors && UrlFoto.touched}" 
+         />
+         <div *ngIf="UrlFoto.errors && UrlFoto.touched" class="invalid-feedback">
+          <div *ngIf="UrlFoto.errors['required']">La Url de la Foto es requerida</div>
+        </div> 
+      </div>
+      
+    <br />
+    <div>
+      <button type="submit">Guardar cambios</button>
+    </div>
+  </form>
+</section>
+

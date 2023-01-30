@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container-fluid{
+    background: #1F1C2C;  /* fallback for old browsers */
+    background: linear-gradient(to right, #928DAB, #1F1C2C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    width: 80%;
+    margin: 0 0 0 20%;
+   
+    padding: 10px;
+    
+}
+
+
+
+.tarjetas{
+    background-color: lightslategray;
+   width: 77%;
+   height:auto;
+   
+   border-radius: 10px;
+   padding: 10px ;
+   margin: 5% 5% 5% 13%;
+   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+    text-align: start;
+   position: relative;
+   
+}
+
+h3{
+    color: white;
+}
+h4{
+    color: white;
+}
+
+p {
+    list-style:outside;
+    margin: 5px;
+    color: white;
+}
+
+.tarjetas  button{
+    position: -ms-page;
+    
+    right: 5px;
+    top: 10px;
+}
+.max-contenido{
+    background-color: #928DAB;
+}

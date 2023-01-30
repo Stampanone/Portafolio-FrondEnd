@@ -1,0 +1,54 @@
+{
+    "nombre": "M. Julieta",
+    "apellido": "Stampanone",
+    "acerca":"Hola soy una persona activa, responsable y cuidadosa. Me gusta trabajar en equito y siempre trato de LLevarme bien con todos. Creo que con respeto y pasiencia se puede lograr lo que uno quiera! Me gusta mucho el diseño y la programación lo cual creo que se llevan muy bien juntos.",
+    "edad": 27,
+    
+    "estudios":[
+        {
+            "id": 1,
+            "titulo": "Orientacion en Produccíon de Bienes y Servicios",
+            "institucion": "Ce.N.M.A Salud",
+            "inicio": "02/2013",
+            "fin": "12/2013",
+            "descripcion": "Culminación de estudios secundarios"
+        },
+
+        {
+            "id": 2,
+            "titulo": "Diseño Grafico",
+            "institucion": "Casa de la Cultura Alta Gracia",
+            "inicio": "08/2021",
+            "fin": "12/2021",
+            "descripcion": "Conseptos basicos del Diseño Grafico, manejo del Photoshop, manejo del Adobe Illustraitor, manejo de Corel Draw"
+        },
+
+        {
+            "id": 3,
+            "titulo": "Curso Profecional de Phyton",
+            "institucion": "Codigo Facilito",
+            "inicio": "06/2022",
+            "fin": "06/2022",
+            "descripcion": "Conceptos y desarrolo en Python"
+        }
+    ],
+    "trabajos":[
+        {
+            "id": 1,
+            "puesto": "Atencion al Publico",
+            "institucion": "Complejo Portal del Lago",
+            "inicio": "08/2014",
+            "fin": "12/2020",
+            "descripcion": "Conseptos basicos del Diseño Grafico, manejo del Photoshop, manejo del Adobe Illustraitor, manejo de Corel Draw"
+        },
+
+        {
+            "id": 2,
+            "puesto": "Moza",
+            "institucion": "Complejo Portal del Lago",
+            "inicio": "06/2014",
+            "fin": "06/2020",
+            "descripcion": "Conceptos y desarrolo en Python"
+        }
+    ]
+}

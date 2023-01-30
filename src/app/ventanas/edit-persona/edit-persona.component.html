@@ -1,0 +1,119 @@
+<section id="idiomas">
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+    <input type="hidden" formControlName="id"  [ngModel]="pers.id" >
+    <div>
+      <label for="apellido">Apellido: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="apellido"
+        [ngModel]="pers.apellido"
+        [ngClass]="{'is-invalid': Apellido.errors && Apellido.touched, 'is-valid': !Apellido.errors && Apellido.touched}" 
+      />
+      
+      <div *ngIf="Apellido.errors && Apellido.touched" class="invalid-feedback">
+        <div *ngIf="Apellido.errors['required']">El apellido es requerido</div>
+      </div> 
+    </div>
+
+    <div>
+      <label for="nombre" class="form-label">Nombre: </label>
+      <input class="form-control"
+        type="text"
+        formControlName="nombre"
+        [ngModel]="pers.nombre"
+        [ngClass]="{'is-invalid': Nombre.errors && Nombre.touched, 'is-valid': !Nombre.errors && Nombre.touched}" 
+       />
+       <div *ngIf="Nombre.errors && Nombre.touched" class="invalid-feedback">
+        <div *ngIf="Nombre.errors['required']">La nombre es requerida</div>
+      </div>
+    </div>
+    <div>
+        <label for="domicilio" class="form-label">Domicilio: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="domicilio"
+          [ngModel]="pers.domicilio"
+          [ngClass]="{'is-invalid': Domicilio.errors && Domicilio.touched, 'is-valid': !Domicilio.errors && Domicilio.touched}" 
+         />
+         <div *ngIf="Domicilio.errors && Domicilio.touched" class="invalid-feedback">
+          <div *ngIf="Domicilio.errors['required']">El domicilio es requerido</div>
+        </div>
+      </div>
+      <div>
+        <label for="fechaNacimiento" class="form-label">Fecha Nacimiento: </label>
+        <input class="form-control"
+          type="date"
+          formControlName="fechaNacimiento"
+          [ngModel]="pers.fechaNacimiento"
+          [ngClass]="{'is-invalid': FechaNacimiento.errors &&  FechaNacimiento.touched, 'is-valid': !FechaNacimiento.errors && FechaNacimiento.touched}" 
+         />
+         <div *ngIf="FechaNacimiento.errors && FechaNacimiento.touched" class="invalid-feedback">
+          <div *ngIf="FechaNacimiento.errors['required']">La fecha nacimiento es requerida</div>
+        </div>
+      </div>
+      <div>
+        <label for="telefono" class="form-label">Telefono: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="telefono"
+          [ngModel]="pers.telefono"
+          [ngClass]="{'is-invalid': Telefono.errors && Telefono.touched, 'is-valid': !Telefono.errors && Telefono.touched}" 
+           />
+           <div *ngIf="Telefono.errors && Telefono.touched" class="invalid-feedback">
+            <div *ngIf="Telefono.errors['required']">El telefono es requerido</div>
+          </div>
+      </div>
+      <div>
+        <label for="mail" class="form-label">Mail: </label>
+        <input class="form-control"
+          type="email"
+          formControlName="mail"
+          [ngModel]="pers.mail"
+          [ngClass]="{'is-invalid': Mail.errors && Mail.touched, 'is-valid': !Mail.errors && Mail.touched}" 
+           />
+           <div *ngIf="Mail.errors && Mail.touched" class="invalid-feedback">
+            <div *ngIf="Mail.errors['required']">El mail es requerido</div>
+          </div>
+      </div>
+      <div>
+        <label for="sobreMi" class="form-label">Sobre Mi: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="sobreMi"
+          [ngModel]="pers.sobreMi"
+          [ngClass]="{'is-invalid': SobreMi.errors && SobreMi.touched, 'is-valid': !SobreMi.errors && SobreMi.touched}" 
+           />
+           <div *ngIf="SobreMi.errors && SobreMi.touched" class="invalid-feedback">
+            <div *ngIf="SobreMi.errors['required']">El SobreMi es requerido</div>
+          </div>
+      </div>
+      <div>
+        <label for="fotoPerfilUrl" class="form-label">Foto Perfil Url: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="fotoPerfilUrl"
+          [ngModel]="pers.fotoPerfilUrl"
+          [ngClass]="{'is-invalid': FotoPerfilUrl.errors && FotoPerfilUrl.touched, 'is-valid': !FotoPerfilUrl.errors && FotoPerfilUrl.touched}" 
+           />
+           <div *ngIf="FotoPerfilUrl.errors && FotoPerfilUrl.touched" class="invalid-feedback">
+            <div *ngIf="FotoPerfilUrl.errors['required']">La direccion URL de la foto es requerida</div>
+          </div>
+      </div>
+      <div>
+        <label for="fotoPortada" class="form-label">Foto Portada: </label>
+        <input class="form-control"
+          type="text"
+          formControlName="fotoPortada"
+          [ngModel]="pers.fotoPortada"
+          [ngClass]="{'is-invalid': FotoPortada.errors && FotoPortada.touched, 'is-valid': !FotoPortada.errors && FotoPortada.touched}" 
+           />
+           <div *ngIf="FotoPortada.errors && FotoPortada.touched" class="invalid-feedback">
+            <div *ngIf="FotoPortada.errors['required']">La direccion URL de la foto es requerida</div>
+          </div>
+      </div>
+    <br />
+    <div>
+      <button type="submit">Guardar Cambios</button>
+    </div>
+  </form>
+</section>

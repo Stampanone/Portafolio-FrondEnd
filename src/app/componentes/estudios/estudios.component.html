@@ -1,0 +1,16 @@
+<section id="estudios" class="tarjetas" >
+    <h3>Estudios</h3>
+    <button class="btn"><i class="fa-solid fa-square-plus" routerLink="agreestudio"></i></button>
+    
+    <div *ngFor="let estu of estudios">
+      <div>
+        <button class="btn"><i class="fa-solid fa-pen" routerLink="editestudio/{{estu.id}}"></i></button>
+        <button class="btn"><i class="fa-solid fa-trash-can" (click)="delete(estu.id)" ></i></button>
+  </div>
+      <h4>{{estu.titulo}}</h4>
+      <p>{{estu.institucion}}</p>
+      <p>{{estu.inicio}} / {{estu.fin}}</p>
+      <p>{{estu.descripcion}}</p>
+      <hr>
+    </div>
+  </section>
