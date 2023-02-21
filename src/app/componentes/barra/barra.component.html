@@ -5,7 +5,8 @@
    <ul>
      <li><a href="https://www.linkedin.com/in/mercedes-julieta-stampanone-7500a7239/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
      <li><a href="#" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-     <li><a href="/login" target="_parent"><i class="fa-regular fa-circle-user"></i></a></li>
+     <li><button class="btn" *ngIf="!isLogged"><a href="/login" target="_parent"><i class="fa-solid fa-user-large"></i></a></button></li>
+     <li><button class="btn" (click)="onLogOut()" *ngIf="isLogged"><a href="" target="_parent"><i class="fa-solid fa-user-large-slash"></i></a></button></li>
      
    </ul>
   </div>

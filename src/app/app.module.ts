@@ -26,6 +26,7 @@ import { EditIdiomaComponent } from './ventanas/edit-idioma/edit-idioma.componen
 import { AgreProyectoComponent } from './ventanas/agre-proyecto/agre-proyecto.component';
 import { EditProyectoComponent } from './ventanas/edit-proyecto/edit-proyecto.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
+import { interceptorProvider } from './service/interceptor-service';
 
 
 
@@ -62,7 +63,9 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
     FormsModule, 
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

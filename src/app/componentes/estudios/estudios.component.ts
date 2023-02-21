@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Estudio } from 'src/app/entidad/estudio';
-
 import { EstudioService } from 'src/app/service/estudio.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-estudios',
@@ -13,11 +14,18 @@ export class EstudiosComponent implements OnInit {
 
   //para traer cualquier tipo de dato: estudios: any;
   estudios: Estudio[]=[];
+  //para mostrar los bostones de edicion solo cuando se esta logueado
+  isLogged= false;
 
-  constructor(private servEstu: EstudioService) { }
+  constructor(private servEstu: EstudioService, private router: Router, private tokenService: TokenService) { }
 
   ngOnInit(): void { 
     this.cargarEstudio();
+    if (this.tokenService.getToken()){
+      this.isLogged= true;
+    }else{
+      this.isLogged= false;
+    }
    }
 
   cargarEstudio(): void{

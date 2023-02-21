@@ -1,49 +1,16 @@
-<h3>Poyectos</h3>
-<button class="btn"><i class="fa-solid fa-square-plus" routerLink="agreproyecto"></i></button>
+<h3>Proyectos</h3>
+<button class="btn" *ngIf="isLogged"><i class="fa-solid fa-square-plus" [routerLink]="'agreproyecto'"></i></button>
 
+<div *ngFor="let proyec of proyecto">
+  <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-pen" [routerLink]="'editproyecto/' + proyec.id"></i></button>
+  <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-trash-can" (click)="delete(proyec.id)"></i></button>
 
-<div *ngFor="let proyec of proyecto" >
-  <button class="btn"><i class="fa-solid fa-pen" routerLink="editproyecto/{{proyec.id}}"></i></button>
-    <button class="btn"><i class="fa-solid fa-trash-can" (click)="delete(proyec.id)" ></i></button>
-
-
-<div class="d-flex align-items-center">
-  <div class="flex-shrink-0">
-    <img src="{{proyec.urlFoto}}" width="300" height="300" alt="{{proyec.nombre}}">
-  </div>
-  <div class="flex-grow-1 ms-3">
-    {{proyec.descripcion}}
-  </div>
-</div>
-</div>
-
-<div *ngIf="proyecto">
-  <div *ngFor="let proyec of proyecto" >
-    <button class="btn"><i class="fa-solid fa-pen" routerLink="editproyecto/{{proyec.id}}"></i></button>
-      <button class="btn"><i class="fa-solid fa-trash-can" (click)="delete(proyec.id)" ></i></button>
-  
-  
   <div class="d-flex align-items-center">
     <div class="flex-shrink-0">
-      <img src="{{proyec.urlFoto}}" width="300" height="300" alt="{{proyec.nombre}}">
+      <img src="{{ proyec.urlFoto }}" width="300" height="300" alt="{{ proyec.nombre }}">
     </div>
     <div class="flex-grow-1 ms-3">
-      {{proyec.descripcion}}
+      {{ proyec.descripcion }}
     </div>
   </div>
-  </div>
-
 </div>
-
-
-
-
-    <div class="d-flex align-items-center">
-      <div class="flex-shrink-0">
-        <img src="./../../../assets/modelo 2.jpg" width="300" height="300" alt="numimastica">
-      </div>
-      <div class="flex-grow-1 ms-3">
-        This is some content from a media component. You can replace this with any content and adjust it as needed.
-      </div>
-    </div>
-    
