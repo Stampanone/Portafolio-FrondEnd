@@ -2,12 +2,14 @@
 <h3>Idiomas y Tecnologías</h3>
 <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-square-plus" routerLink="agreidioma"></i></button>
 
-<div *ngFor="let idio of idioma">
+<div *ngFor="let idio of idioma" class="repeticion">
 <h5>{{idio.nombre}}</h5>
 <div class="progress">
     <div class="progress-bar" role="progressbar" style="width: {{idio.porcentajeDominado}}%" aria-valuenow="idio.porcentajeDominado" aria-valuemin="0" aria-valuemax="100">{{idio.porcentajeDominado}}%</div>
 </div>
+<div class="btn">
     <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-pen" routerLink="editidioma/{{idio.id}}"></i></button>
     <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-trash-can" (click)="delete(idio.id)" ></i></button>
+</div>
 </div>
 </section>

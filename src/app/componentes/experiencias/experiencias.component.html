@@ -1,19 +1,20 @@
 <section class="tarjetas">
-    <h3>Experiencias</h3> 
+  <div class="subtitulo">
+    <h3>Experiencias</h3>
     <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-square-plus" routerLink="agreexpe"></i></button>
-
-    <div *ngFor="let trab of experiencias">
-
-    <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-pen" routerLink="editexpe/{{trab.id}}"></i></button>
-    <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-trash-can" (click)="delete(trab.id)" ></i></button>
- 
-    
-      <h4>{{trab.puesto}}</h4>
-      <p>{{trab.institucion}}</p>
-      <p>{{trab.inicio}} / {{trab.fin}}</p>
-      <p>{{trab.descripcion}}</p>
-      <hr>
+  </div>
+  
+  <div *ngFor="let trab of experiencias" class="repeticion">
+    <div class="btn">
+      <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-pen" routerLink="editexpe/{{trab.id}}"></i></button>
+      <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-trash-can" (click)="delete(trab.id)"></i></button>
     </div>
-     
-  </section>
- 
+
+    <h4>{{trab.puesto}}</h4>
+    <p>{{trab.institucion}}</p>
+    <p>{{trab.inicio}} / {{trab.fin}}</p>
+    <p>{{trab.descripcion}}</p>
+    <hr>
+  </div>
+
+</section>

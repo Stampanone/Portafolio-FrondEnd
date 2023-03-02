@@ -1,10 +1,13 @@
+<div class="tarjetas">
+  <div class="subtitulo">
 <h3>Proyectos</h3>
 <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-square-plus" [routerLink]="'agreproyecto'"></i></button>
-
-<div *ngFor="let proyec of proyecto">
+</div>
+<div *ngFor="let proyec of proyecto" class="proyectos repeticion">
+  <div class="btn">
   <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-pen" [routerLink]="'editproyecto/' + proyec.id"></i></button>
   <button class="btn" *ngIf="isLogged"><i class="fa-solid fa-trash-can" (click)="delete(proyec.id)"></i></button>
-
+</div>
   <div class="d-flex align-items-center">
     <div class="flex-shrink-0">
       <img src="{{ proyec.urlFoto }}" width="300" height="300" alt="{{ proyec.nombre }}">
@@ -13,4 +16,6 @@
       {{ proyec.descripcion }}
     </div>
   </div>
+  <hr>
+</div>
 </div>
