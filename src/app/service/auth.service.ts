@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../entidad/nuevo-usuario';
 })
 export class AuthService {
 
-  authUrl= 'https://web-production-a79e.up.railway.app/'
+  authUrl= 'https://web-production-a79e.up.railway.app/auth/'
 
   constructor(private httpClient: HttpClient) { }
 
