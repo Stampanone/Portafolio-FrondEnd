@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url: "https://web-production-a79e.up.railway.app/"
 };

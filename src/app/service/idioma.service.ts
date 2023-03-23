@@ -8,7 +8,7 @@ import { Idioma } from '../entidad/idioma';
 })
 export class IdiomaService {
 
-  url= "http://localhost:8080/idioma/"
+  url= "https://web-production-a79e.up.railway.app/idioma/"
   constructor(private httpClient:HttpClient) { }
   
   public list(): Observable<Idioma[]>{

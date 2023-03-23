@@ -7,7 +7,7 @@ import { Experiencia } from '../entidad/experiencia';
   providedIn: 'root'
 })
 export class ExperienciaService {
-  url= "http://localhost:8080/experiencia/"
+  url= "https://web-production-a79e.up.railway.app/experiencia/"
   constructor(private httpClient:HttpClient) { }
 
   public list(): Observable<Experiencia[]>{

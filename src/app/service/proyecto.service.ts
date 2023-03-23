@@ -8,7 +8,7 @@ import { Proyecto } from '../entidad/proyecto';
 })
 export class ProyectoService {
 
-  url= "http://localhost:8080/proyecto/"
+  url= "https://web-production-a79e.up.railway.app/proyecto/"
   constructor(private httpClient:HttpClient) { }
 
   public list(): Observable<Proyecto[]>{
